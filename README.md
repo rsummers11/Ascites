@@ -1,5 +1,30 @@
 # Ascites Segmentation with nnUNet
 
+## Ascites Dataset (TCGA-OV-AS)
+
+This dataset is derived from [TCGA-OV](https://wiki.cancerimagingarchive.net/pages/viewpage.action?pageId=7569497) Dataset. Download the data from TCIA with **Descriptive Directory Name** download option.
+
+### Converting Images
+
+Convert the DICOMs to NIFTI format using `dcm2niix` and `GNU parallel`.
+
+1. Create the directory structure required for each NIFTI file:
+   1. `find TCGA-OV -type d -exec mkdir -p -- /tmp/{} \;`
+   2. `mv /tmp/TCGA-OV ./TCGA-OV-NIFTI`
+
+2. Convert DICOMs to NIFTI
+   1. `parallel --jobs $n < jobs.txt` where `$n` is number of parallel jobs.
+
+### Ascites Labels
+
+285 images that are free of corruption have been hand-picked for use, images mostly consist of **ABDOMEN-PELVIS** scans. Labels can be downloaded [here](https://nihcc.box.com/s/uea6qbmrd5rgdup7jufga1k7pavas671).
+
+### Clinical Information
+
+Patient clinical data can be downloaded from TCIA: [TCGA-OV Clinical Data.zip
+](https://wiki.cancerimagingarchive.net/download/attachments/7569497/TCGA-OV%20Clinical%20Data%201516.zip?version=1&modificationDate=1452105785692&api=v2)
+
+
 ## Method 1: Run Inference using `nnunet_predict.py`
 
 1. Install the latest version of [nnUNet](https://github.com/MIC-DKFZ/nnUNet#installation) and [PyTorch](https://pytorch.org/get-started/locally/).
