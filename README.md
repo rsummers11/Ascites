@@ -10,7 +10,7 @@ user@machine:~/ascites_segmentation$ pip install torch torchvision torchaudio nn
 
 2. Download model and weights:
 
-- [ascites_model.tar.gz]() 
+- [ascites_model.tar.gz](https://nihcc.app.box.com/s/oc81mic9k8vre30fq0eanxqp9kdwern2) 
 <br> Size: 1.1G <br> MD5: `d39aa7f8d29bddd4edf9e4b24a8f55a1`
 
 3. Run inference with command:
@@ -54,7 +54,7 @@ user@machine:~/ascites_segmentation$ pip install torch torchvision torchaudio nn
 
 2. Download model and weights:
 
-- [ascites_model.tar.gz]() 
+- [ascites_model.tar.gz](https://nihcc.app.box.com/s/oc81mic9k8vre30fq0eanxqp9kdwern2) 
 <br> Size: 1.1G <br> MD5: `d39aa7f8d29bddd4edf9e4b24a8f55a1`
 
 3. Place checkpoints in directory tree:
